@@ -14,9 +14,17 @@ def string_info (string):
 
 def is_contains(string, list_to_search):
     count_calls()
-    if string in list_to_search:
+    for el in list_to_search:
+        el.lower()
+    if string.lower() in list_to_search:
         return True
     else: return False
+
+# ЗДРАВСТВУЙТЕ, ПОДСКАЖИТЕ, ПОЧЕМУ У МЕНЯ ВАРИАНТ НИЖЕ НЕ СРАБОТАЛ?
+    # for el in list_to_search:
+    #     if el.lower() == string.lower():
+    #         return True
+    #     else: return False
 
 print(is_contains("kk", ["hfhfh", 'hhh']))
 print(is_contains("kk", ["hfhfh", 'hhh', "kk"]))
